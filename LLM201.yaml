@@ -1,0 +1,17 @@
+# LLM201.yaml
+
+# install: conda env create -f LLM201.yaml
+
+name: LLM201
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - pip
+  - ipython
+  - jupyter
+  - notebook
+  - pip:
+    - "openai"
+    - "python-dotenv"
