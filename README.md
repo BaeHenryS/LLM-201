@@ -8,9 +8,7 @@ The [example_math_openai.ipynb](./examples/example_math_openai.ipynb) notebook p
 
 </br>
 
-<a href="https://colab.research.google.com/github/BaeHenryS/LLM-201/blob/main/examples/example_math_openai.ipynb" target="_blank">
-    <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
-</a>
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/BaeHenryS/LLM-201/blob/main/examples/example_math_openai.ipynb)
 
 ## Local Installation 
 
