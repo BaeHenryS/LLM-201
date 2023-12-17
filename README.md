@@ -6,8 +6,6 @@ This repo provides a pipeline for evaluating and fine tuning different LLMs on v
 
 The [example_math_openai.ipynb](./examples/example_math_openai.ipynb) notebook provides a step-by-step guideline to refine the data, fine tune LLM with OpenAI, then evaluate it on the Math Dataset, with options to easily switch to a custom-made dataset. The notebook is also available on Google Colab below:
 
-</br>
-
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/BaeHenryS/LLM-201/blob/main/examples/example_math_openai.ipynb)
 
 ## Local Installation 
