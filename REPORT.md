@@ -1,6 +1,10 @@
 # LLM-201
 Large Language Model Project for Harvard AM201 Course.
 
+Please use the below notebook access the example:
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/BaeHenryS/LLM-201/blob/main/examples/example_math_openai.ipynb)
+
 
 ## Purpose
 
@@ -17,9 +21,49 @@ The difficulty comes from organization and curation of data into a standard form
 For this reason, the bulk of the time spent on this project 
 
 
+## Process Overview
+
+Here, we outline our process to collect, clean, and process student submissions to train a language model, as well as the steps to fine-tune the model for specific classes.
+
+### Data Collection
+
+To standardize data formats, we have outlined the steps to collect and input the data into a spreadsheet, which can be quickly converted into a standard format for fine tuning. We have followed the formatting of the MATH dataset, which is a dataset of mathematical problems and solutions. The dataset is also available [here](https://paperswithcode.com/dataset/math). The below shows the format of the dataset we have used:
+
+| Column          | Description           |
+| ------------------ | --------------------- |
+| problem            | The statement of the math problem |
+| type               | The category of the problem (e.g. AM201 Integrals) |
+| level              | The difficulty level of the problem in integer (optional) |
+| solution           | The solution to the problem, the final solution should be withinin \$\\\boxed{}\$ |
+
+We have also made it so that the person can input the data into a JSONL, which would not require any conversions.
+
+One could alternatively follow the .json/.jsonl format. with the following format:
+
+```json
+{
+    "problem": "The statement of the math problem",
+    "type": "The category of the problem (e.g. AM201)",
+    "level": "The difficulty level of the problem in integer (optional)",
+    "solution": "The solution to the problem, the final solution should be withinin \$\\\boxed{}\$"
+}
+```
+
+The standardized format ensures proper selection of test values (final answers for the math problems) and organization of data. 
+
+### Fine-Tuning
+
+We have identified two broad methods of fine-tuning language models. First, with the GPT models with OpenAI, we have used the OpenAI library in Python as well as the OpenAI API website to fine-tune a baseline GPT-3.5 model. We found this to be the easiest method to fine-tune LLM's with its simple interface and easy-to-use API commands. The example Colab Notebook that we have provided at the top of the report provides the fine-tuning steps with OpenAI. 
+
+The other option has been through the HuggingFace library. 
+
+
 ## Evaluation
 
-To objectively and efficiently measure the impact of domain-specific datsets (specifically curated dataset on advanced mathematics problems), it is important to develop tools to quantitatively assess the performance of LLM's and the improvements resulting from additional data. Here, we outline the process to evaluate our LLM's performance on the AM201 dataset.
+To objectively and efficiently measure the impact of domain-specific datsets (specifically curated dataset on advanced mathematics problems), it is important to develop tools to quantitatively assess the performance of LLM's and the improvements resulting from additional data. Here, we outline the process to evaluate our LLM's performance on the AM201 dataset. 
+
+## Future Work
+
 
 
 
