@@ -29,7 +29,7 @@ Here, we outline our process to collect, clean, and process student submissions 
 
 ### Data Collection
 
-To standardize data formats, we have outlined the steps to collect and input the data into a spreadsheet, which can be quickly converted into a standard format for fine tuning. We have followed the formatting of the MATH dataset, which is a dataset of mathematical problems and solutions. The dataset is also available [here](https://paperswithcode.com/dataset/math). The below shows the format of the dataset we have used:
+To standardize data formats, we have outlined the steps to collect and input the data into a spreadsheet, which can be quickly converted into a standard format for fine tuning. We have followed the formatting of the MATH dataset introduced by [Hendrycks et al.](https://arxiv.org/abs/2103.03874), which is a dataset of mathematical problems and solutions. The dataset is also available [here](https://paperswithcode.com/dataset/math). The below shows the format of the dataset we have used:
 
 | Column          | Description           |
 | ------------------ | --------------------- |
@@ -55,9 +55,9 @@ The standardized format ensures proper selection of test values (final answers f
 
 ### Fine-Tuning
 
-We have identified two broad methods of fine-tuning language models. First, with the GPT models with OpenAI, we have used the OpenAI library in Python as well as the OpenAI API website to fine-tune a baseline GPT-3.5 model. We found this to be the easiest method to fine-tune LLM's with its simple interface and easy-to-use API commands. The example Colab Notebook that we have provided at the top of the report provides the fine-tuning steps with OpenAI. 
+We have identified two broad methods of fine-tuning language models. First, with the GPT models with OpenAI, we have used the OpenAI library in Python as well as the [OpenAI API website](https://platform.openai.com/docs/overview) to fine-tune a baseline [GPT-3.5 model](https://openai.com/blog/gpt-3-5-turbo-fine-tuning-and-api-updates). We found this to be the easiest method to fine-tune LLM's with its simple interface and easy-to-use API commands. The example Colab Notebook that we have provided at the top of the report provides the fine-tuning steps with OpenAI. 
 
-The other option has been through the HuggingFace library. The Transformers Library provides a wide range of LLM's that can be fine-tuned. We have identified that Llama-2 model would be the best model to fine-tune for our purposes. We have the data format and the skeleton code for fine-tuning with Llama-2 in the [example_math_huggingface.ipynb](./examples/example_math_huggingface.ipynb) notebook.
+The other option has been through the HuggingFace library. The Transformers Library provides a wide range of LLM's that can be fine-tuned. We have identified that [Llama-2 model](https://arxiv.org/abs/2307.09288) would be the best model to fine-tune for our purposes. We have the data format and the skeleton code for fine-tuning with Llama-2 in the [example_math_huggingface.ipynb](./examples/example_math_huggingface.ipynb) notebook.
 
 
 Our primarly limitation from the project came from the compute power. We were limited to usage of API calls and compute resources from our personal accounts and Google Colab, which limited the fine tuning that we could do currently. Although we have requested for API access many weeks ago, we have not redeived access to it yet.
